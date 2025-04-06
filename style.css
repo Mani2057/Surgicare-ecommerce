@@ -1,0 +1,267 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Logo Styling */
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.logo .logo-half {
+    color: red; /* First half red */
+}
+
+.logo .logo-rest {
+    color: white; /* Second half white */
+}
+/* Navbar Improvements */
+nav {
+    background-color: #2c3e50;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0; /* Fix position */
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+    padding: 10px;
+}
+
+nav ul li a:hover {
+    color: #1abc9c;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+}
+/* Background Image Section */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 400px; /* Adjust height as needed */
+    background: url('https://img.freepik.com/free-vector/watercolor-medical-background_52683-162142.jpg?t=st=1743137510~exp=1743141110~hmac=2044346756de59667f332c4c70531f48ca6357dbbd91362dea0b7f186845dccd&w=2000') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* testing */
+/* Hero Section */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 300px; /* Adjust height as needed */
+    background: url('https://img.freepik.com/premium-vector/abstract-background-hexagons-design_41981-798.jpg?w=1800') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Overlay Effect */
+.hero-section .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark transparent overlay */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Search Form Styling */
+.search-form {
+    background: rgba(255, 255, 255, 0.2); /* Transparent White */
+    padding: 15px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+}
+
+.search-form input[type="text"],
+.search-form select,
+.search-form button {
+    padding: 12px;
+    border: none;
+    font-size: 16px;
+    border-radius: 10px;
+}
+
+.search-form input[type="text"] {
+    flex: 1;
+    outline: none;
+}
+
+.search-form select {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.search-form button {
+    background-color: #1abc9c;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.search-form button:hover {
+    background-color: #16a085;
+}
+
+
+
+/* Product Grid */
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+}
+
+/* Product Card */
+.product {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+}
+
+/* Product Image */
+.product img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Product Details */
+.product h3 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.product p {
+    font-weight: bold;
+    color: #2c3e50;
+    margin: 5px 0;
+}
+
+/* Add to Cart Button */
+.product button {
+    background-color: #1abc9c;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+    transition: 0.3s;
+}
+
+.product button:hover {
+    background-color: #16a085;
+}
+
+/* Bootstrap Toast Notification */
+.toast {
+    position: fixed;
+    bottom: 10%;
+    right: 20px;
+    min-width: 250px;
+    background: #1abc9c;
+    color: white;
+    padding: 12px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    animation: fadeIn 0.5s;
+}
+
+.toast button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+/* back to home */
+.back-link {
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 18px;
+    color: #28a745;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.back-link:hover {
+    color: #1e7e34;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    form {
+        flex-direction: column;
+    }
+
+    input[type="text"], select, button {
+        width: 100%;
+        margin: 5px 0;
+    }
+}

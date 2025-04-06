@@ -1,0 +1,142 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    background: #f4f4f4;
+}
+
+/* Split Layout */
+.container {
+    display: flex;
+    width: 100%;
+}
+
+/* Left Panel */
+.left-panel {
+    flex: 1;
+    background: linear-gradient(135deg, #3a53f5, #1e2ea5);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.content {
+    text-align: left;
+    max-width: 400px;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+h1 span {
+    font-weight: bold;
+}
+
+p {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+/* Right Panel */
+.right-panel {
+    flex: 1;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.login-box {
+    width: 100%;
+    max-width: 350px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+form input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+}
+form input:focus {
+    border-color: #1e2ea5;
+    box-shadow: 0 0 5px rgba(30, 46, 165, 0.5);
+}
+
+/* Login Button */
+button {
+    width: 100%;
+    padding: 12px;
+    background: black;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+
+button:hover {
+    background: #1e2ea5;
+    transform: scale(1.05);
+}
+
+/* Forgot Password */
+.forgot-password {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.forgot-password a {
+    color: #1e2ea5;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.forgot-password a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .left-panel {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .right-panel {
+        width: 100%;
+    }
+    .login-box {
+        max-width: 90%;
+    }
+}
